@@ -11,12 +11,43 @@ body {
   font-family: Arial, sans-serif;
   overflow: hidden; /* Prevent scrolling */
 }
+/* Styles for larger screens */
+@media (min-width: 600px) {
+  .navbar {
+    padding: 15px;
+    font-size: 18px;
+  }
+  .form-container input, .form-container button {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar {
+    padding: 20px;
+    font-size: 20px;
+  }
+  .form-container input, .form-container button {
+    font-size: 20px;
+    padding: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 25px;
+    font-size: 22px;
+  }
+  .form-container input, .form-container button {
+    font-size: 22px;
+    padding: 15px;
+  }
+}
 /* Navbar styling */
 .navbar {
   display: flex;
   justify-content: center;
   background-color: #1e1e1e;
-  padding: 1px 0;
+  padding: 0px 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -25,10 +56,11 @@ body {
 .navbar a {
   color: #ffffff;
   text-decoration: none;
-  padding: 2px 3px;
+  padding: 0px 0px;
   margin: 10px 10px;
   font-size: 14px;
   transition: background-color 0.3s, color 0.3s;
+  text-align: center;
 }
 .navbar a:hover {
   font-weight: bold; /* Bolds the text on hover */

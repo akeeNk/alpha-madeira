@@ -11,24 +11,59 @@ body {
   font-family: Arial, sans-serif;
   overflow: hidden; /* Prevent scrolling */
 }
+/* Styles for larger screens */
+@media (min-width: 600px) {
+  .navbar {
+    padding: 15px;
+    font-size: 18px;
+  }
+  .calendar button {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar {
+    padding: 20px;
+    font-size: 20px;
+  }
+  .calendar button {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 25px;
+    font-size: 22px;
+  }
+  .calendar button {
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+  }
+}
 /* Navbar styling */
 .navbar {
   display: flex;
   justify-content: center;
-  background-color: #1e1e1e;
-  padding: 1px 0;
+  background-color: #1e1e1e; 
+  padding: 0px 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
 .navbar a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
-  padding: 2px 3px;
+  padding: 0px 0px;
   margin: 10px 10px;
   font-size: 14px;
   transition: background-color 0.3s, color 0.3s;
+  text-align: center;
 }
 .navbar a:hover {
   font-weight: bold; /* Bolds the text on hover */
@@ -36,7 +71,7 @@ body {
 }
 #title {
   font-size: 48px;
-  margin-top: 50px;
+  margin-top: 55px;
   text-align: center;
 }
 #title span {
@@ -145,7 +180,7 @@ body {
   width: 40px;
   height: 40px;
   font-size: 12px;
-  border: 1px solid #ffffff; /* White borders for each cell */
+  border: 1px solid white; /* White borders for each cell */
   cursor: pointer;
   transition: background-color 0.3s;
   padding: 5px; /* Add padding */

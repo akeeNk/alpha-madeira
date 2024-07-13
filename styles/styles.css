@@ -11,6 +11,30 @@ body {
   font-family: Arial, sans-serif;
   overflow: hidden; /* Prevent scrolling */
 }
+/* Styles for larger screens */
+@media (min-width: 600px) {
+  .buttons-container button {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+}
+@media (min-width: 768px) {
+  .buttons-container button {
+    font-size: 22px;
+    padding: 20px 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .buttons-container button {
+    font-size: 24px;
+    padding: 25px 50px;
+  }
+}
+#title {
+  font-size: 48px;
+  margin-top: 55px;
+  text-align: center;
+}
 /* Button container styling */
 .button-container {
   display: flex;
@@ -18,12 +42,13 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  margin: -180px 0;
 }
 .button-container button {
   background-color: #1e1e1e;
   color: #ffffff;
   border: 2px solid #ffffff;
-  padding: 15px 30px;
+  padding: 10px 20px;
   margin: 10px 0;
   font-size: 18px;
   cursor: pointer;
