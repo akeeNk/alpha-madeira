@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrolling */
+}
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #1e1e1e;
+  padding: 1px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 2px 3px;
+  margin: 10px 10px;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.navbar a:hover {
+  font-weight: bold; /* Bolds the text on hover */
+  background-color: transparent; /* Ensure background color does not change */
+}
+#title {
+  font-size: 48px;
+  margin-top: 50px;
+  text-align: center;
+}
+#title span {
+  animation: rainbow 1s linear infinite;
+}
+@keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  14% {
+    color: #ff7f00;
+  }
+  28% {
+    color: #ffff00;
+  }
+  42% {
+    color: #00ff00;
+  }
+  57% {
+    color: #0000ff;
+  }
+  71% {
+    color: #4b0082;
+  }
+  85% {
+    color: #9400d3;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+/* Styling the FlipClock container */
+#flipclock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+/* Styling the FlipClock labels */
+.flip-clock-label {
+  color: white !important; /* Important to override any inline or external styles */
+  font-size: 22px; /* Adjust label font size */
+}
+/* Adjust margins for FlipClock labels */
+.flip-clock-divider.days .flip-clock-label {
+  margin-right: -9px; /* Adjust right margin for days label */
+}
+.flip-clock-divider.hours .flip-clock-label {
+  margin-right: -14px; /* Adjust right margin for hours label */
+}
+.flip-clock-divider.minutes .flip-clock-label {
+  margin-right: -20px; /* Adjust right margin for minutes label */
+}
+.flip-clock-divider.seconds .flip-clock-label {
+  margin-right: -23px; /* Adjust right margin for seconds label */
+}
+/* Applying scaling to adjust size */
+.timer {
+  zoom: 0.4; /* For modern browsers */
+  -moz-transform: scale(1); /* For Firefox */
+  -webkit-transform: scale(1); /* For WebKit-based browsers */
+  transform: scale(1); /* Standard transform property */
+}
+/* Tones for FlipClock */
+.flip-clock-wrapper ul.flip:nth-child(11) li a div div.inn,
+.flip-clock-wrapper ul.flip:nth-child(12) li a div div.inn {
+  background: #666666; /* Dark grey for seconds */
+}
+.flip-clock-wrapper ul.flip:nth-child(8) li a div div.inn,
+.flip-clock-wrapper ul.flip:nth-child(9) li a div div.inn {
+  background: #999999; /* Medium grey for minutes */
+}
+.flip-clock-wrapper ul.flip:nth-child(5) li a div div.inn,
+.flip-clock-wrapper ul.flip:nth-child(6) li a div div.inn {
+  background: #cccccc; /* Light grey for hours */
+}
+.flip-clock-wrapper ul.flip:nth-child(2) li a div div.inn,
+.flip-clock-wrapper ul.flip:nth-child(3) li a div div.inn {
+  background: #ff9999; /* Very light red for days */
+}
+.subtitle {
+  font-size: 16px; /* Adjust font size */
+  margin-top: 10px; /* Adjust top margin */
+  padding: 5px 10px; /* Adjust padding */
+  text-align: center;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+.subtitle p {
+  margin: 0;
+}
+.subtitle .favicon {
+  vertical-align: text-bottom;
+  width: 18px; /* Adjust favicon size */
+  height: 18px;
+  margin-left: 2px; /* Adjust spacing between text and favicon */
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0px;
+  margin-top: 10px;
+}
+.calendar button {
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  border: 1px solid #ffffff; /* White borders for each cell */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 5px; /* Add padding */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Ensure borders are included in the button size */
+}
+.calendar button:hover {
+  border: 2px solid #006600; /* Green hover effect */
+}
+.calendar button.locked {
+  background-color: #666666; /* Dark Grey for locked days */
+}
+.calendar button.unlocked {
+  background-color: #b3b300; /* Yellow for unlocked days */
+}
+.calendar button.clicked {
+  background-color: #006600; /* Green for clicked days */
+  pointer-events: none; /* Disable click */
+}
+.credits {
+  font-size: 12px; /* Reduce font size */
+  margin-top: 5px; /* Adjust margin */
+  padding: 5px 10px; /* Adjust padding */
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #121212;
+}
+#animation-container {
+  width: 300px; /* Adjust width as needed */
+  height: 150px; /* Adjust height as needed */
+  margin: 10px 0; /* Add margin to separate from calendar */
+}
+#fortune-container {
+  margin-top: -10px;
+  font-size: 14px;
+  text-align: center;
+}
+#fortune-container span {
+  animation: rainbow 1s linear infinite;
+}
